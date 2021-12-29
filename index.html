@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPO Neural Network</title>
+    <script src="./tf.min.js"></script>
+    <script src="./math.js"></script>
+    <script src="data.js" defer></script>
+    <script src="run_ml.js" defer></script>
+</head>
+<body>
+    <div>
+        <input type="number" name="" id="" placeholder="# Points"> <button onclick="">Generate Data</button> <button onclick="saveModel()">Save Model</button>
+    </div>
+    <div>
+        <input type="file" id="model-input" multiple oninput="loadModel()">
+        <button onclick="startTraining()">Start Learning</button>
+        <input type="number" placeholder="# Epochs" value="25" id="epochs-input">
+        <input type="number" placeholder="# per Batch" value="50" id="batch-input">
+    </div>
+    <div><input type="number" name="" id="radial-pred" placeholder="Radial"> <input type="number" name="" id="it-pred" placeholder="In-Track"> <button onclick="predictModel()">Predict</button></div>
+    <div id="predict-result"></div>
+    <div id="epoch-text">No Current Training</div>
+    <div id="batch-text">No Current Training</div>
+</body>
+</html>
